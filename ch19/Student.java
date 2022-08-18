@@ -11,15 +11,14 @@ public class Student {
         this.studentNumber = studentNumber;
         this.studentName = studentName;
 
-        subjectList = new ArrayList<>(); // 학생마다 과목배열을 가지고있는다.
+        subjectList = new ArrayList<>(); // 학생객체를 만들때마다 그 학생의 과목배열도 만들어준다.
     }
     // 어떤 과목을 수강을 하면 subjectList에 넣는 메서드를 하나 만들자
     public void addSubject(String name, int point){
-        Subject subject = new Subject();
-        subject.setSubjectName(name);
+        Subject subject = new Subject(); // 우선 배열에 넣기위해서 과목 참조변수를 만들어줘야함.
+        subject.setSubjectName(name);// 그 참조변수의 과목이름과 포인트를 설정.
         subject.setPoint(point);
-
-        subjectList.add(subject);
+        subjectList.add(subject); // 배열에 그 참조변수를 저장.
     }
 
     public void showStudentInfo() {

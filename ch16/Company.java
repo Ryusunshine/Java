@@ -9,7 +9,8 @@ public class Company { // 회사가 하나인 싱글톤 인스턴스를 만들�
 
     // 이 클래스의 직원수나 메서드에 접근을 할려면 이 유일한 인스턴스에 접근을 해야함.
     // 그래서 외부에서 유일한 인스턴스를 참조할수있는 public 메서드를 제공.
-    public static Company getInstance() { // 이 메서드는 static으로 설정해서 외부에서 객체 생성안하고 호출할수 있도록 한다.
+    public static Company getInstance() {
+        // 반환값은 Company이고 이름은 getInstance 메서드는 static으로 설정해서 외부에서 객체 생성안하고 호출할수 있도록 한다.
         if (instance == null)
             instance = new Company();
 
