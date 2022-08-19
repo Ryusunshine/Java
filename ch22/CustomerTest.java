@@ -45,7 +45,7 @@ public class CustomerTest {
             System.out.println(customer.showCustomerInfo());
         }
 
-        if (customer3 instanceof GoldCustomer){ // instanceof를 이용한 형 체크 
+        if (customer3 instanceof GoldCustomer){ // instanceof를 이용한 형 체크
             GoldCustomer customer5 = (GoldCustomer) customer3;
             System.out.println(customer3.showCustomerInfo());
         }
