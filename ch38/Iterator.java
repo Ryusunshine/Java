@@ -23,7 +23,7 @@ public class Iterator {
 
             ArrayList arrayList = new ArrayList();
 
-            java.util.Iterator<Member> ir = arrayList.iterator();
+            java.util.Iterator<Member> ir = arrayList.iterator(); // arrayList의 iterator를 Member타입으로 형변환
             while(ir.hasNext()) {
                 Member member = ir.next();
                 int tempId = member.getMemberId();

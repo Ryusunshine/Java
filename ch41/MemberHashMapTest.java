@@ -16,7 +16,7 @@ public class MemberHashMapTest {
         MemberHashMap.addMember(member3);
         MemberHashMap.showAll();
 
-        HashMap<Integer, String > hashMap = new HashMap<Integer, String>();
+        HashMap<Integer, String > hashMap = new HashMap<Integer, String>();// HashMap<Key타입, value타입> 을 써줘야한다.
         hashMap.put(100, "Ryu");
         hashMap.put(200, "sun");
         hashMap.put(300, "Yeom");

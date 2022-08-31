@@ -5,7 +5,6 @@ public class VIPCustomer extends Customer { // 상속
     private String agentId; // 전문상담원
 
     VIPCustomer() {
-
         salesRatio = 0.1;
         bonusRatio = 0.05;
         customerGrade = "VIP";

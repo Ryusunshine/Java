@@ -4,7 +4,7 @@ package ch30;
 public class MyArray {
 
     int[] intArr;
-    int count;
+    int count; // 배열칸의 개수
 
     public int ARRAY_SIZE;
     public static final int ERROR_NUM = 999999999;
@@ -61,7 +61,7 @@ public class MyArray {
 
         ret = intArr[index];
         for (int i=index; i<count-1; i++) {
-            intArr[i] = intArr[i + 1]; // 뒤로 한칸씩 이동
+            intArr[i] = intArr[i + 1]; // 앞으로 한칸씩 이동
         }
             count--;
             return ret;

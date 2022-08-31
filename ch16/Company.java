@@ -2,7 +2,7 @@ package ch16; // 싱글톤 패턴
 
 public class Company { // 회사가 하나인 싱글톤 인스턴스를 만들어보자
     // 싱글톤 패턴은 클래스 내부에 유일한 private 인스턴스있는 디자인패턴이다.
-    private static Company instance = new Company(); //클래스내부에서 객체를 하나 만듦으로써 유일한 객체가 되었음.
+    private static Company instance = new Company(); //클래스내부에서 객체를 하나있다고 설정. 생성하면 유일한 객체가 됨.
 
     // 생성자를 만들지않으면 default 값으로 외부에서 여러개의 회사를 만들수있기 때문에 company 생성자를 private으로 생성한다.
     private Company() {}; // 생성자를 만들면 컴파일러는 생성자를 제공해주지않음.

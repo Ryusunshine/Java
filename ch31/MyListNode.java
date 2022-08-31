@@ -4,7 +4,7 @@ public class MyListNode {
     private String data;       // 자료
     public MyListNode next;    // 다음 노드를 가리키는 링크
 
-    public MyListNode(){
+    public MyListNode(){//객체 생성자. 모든값을 초기화
         data = null;
         next = null;
     }

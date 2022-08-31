@@ -2,6 +2,11 @@ package ch41;
 
 import java.util.Comparator;
 
+// Comparable과 Comparator는 모두 인터페이스(interface)
+// Comparable 인터페이스를 쓰려면 compareTo 메소드를 구현해야하고, Comparator 인터페이스를 쓰려면 compare 메소드를 구현해야 한다
+//하지만, 새로운 클래스 객체를 만들어 비교하고자 한다면 어떻게 될까? 예로들어 학생의 나이와 학급 정보를 갖고있는 클래스를 만든다고 가정하면 비교가 힘들다.
+// Comparable은 "자기 자신과 매개변수 객체를 비교"하는 것이고, Comparator는 "두 매개변수 객체를 비교"한다
+
 public class Member implements Comparator<Member> {
     // public class Member implements Comparable<Member> = Comparable도 구현할수있다.
 

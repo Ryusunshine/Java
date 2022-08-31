@@ -16,7 +16,7 @@ public class Student implements Cloneable{
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Student){ // 넘어온 매개변수가 Student 가 조상타입이면
-            Student std = (Student)obj;
+            Student std = (Student)obj; //Student가 조상이 맞으면 형변환
             if (this.studentNum == std.studentNum)
                 return true;
             else return false;
@@ -35,7 +35,7 @@ public class Student implements Cloneable{
     //- clone()메서드를 사용하면 객체의 정보(멤버 변수 값등) 가 동일한 또 다른 인스턴스가 생성되는 것이므로, 객체 지향 프로그램에서의 정보은닉, 객체 보호의 관점에서 위배될수 있음
     //- 해당 클래스의 clone()메서드의 사용을 허용한다는 의미로 cloneable 인터페이스를 명시해줌
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone() throws CloneNotSupportedException {  // clone() : 자신을 복제하여 새로운 인스턴스를 생성
         return super.clone();
     }
 }

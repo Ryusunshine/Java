@@ -11,7 +11,7 @@ public class VIPCustomer extends Customer { // 상속
         // super()는 상위클래스의 기본 생성자를 호출함
         // 하위클래스에서 명시적으로 상위클래스의 생성자를 호출하지않으면 super()가 호출됨(이때 반드시 상위 클래스의 기본 생성자가 존재 해야됨)
         // 상위 클래스의 기본 생성자가 없는경우(다른 생성자가 있는 경우) 하위클래스의 생성자에서 super를 자동적으로 생성하여  상위 클래스의 생성자를 호출함. 직접쓰는경우는 거의없음.
-        salesRatio = 0.1;
+        salesRatio = 0.1; //vip에게만 salesRatio를 가능하게함.
         bonusRatio = 0.05;
         customerGrade = "VIP";
     }

@@ -10,7 +10,8 @@ class Outer{
     int outNum = 100;
     static int sNum = 200;
 
-    Runnable getRunnable(int i) {
+    // Runnable 인터페이스는 구현할 메소드가 run() 하나 뿐인 함수형 인터페이스
+    Runnable getRunnable(int i) { //  빈환타입이 Runnable이라서 Runnable 클래스이름 이라고 적은거임.
         final int num = 100;
 
         return new Runnable() {//runnable인터페이스를 구현한 클래스를 만듦.
