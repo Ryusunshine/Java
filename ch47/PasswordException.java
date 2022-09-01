@@ -5,5 +5,5 @@ public class PasswordException extends IllegalArgumentException{
     public PasswordException(String message){
         super(message);
     }
-
+    // 애를 호출한 쪽에서 message를 매개변수로 들여보내서 호출시킬거임.
 }

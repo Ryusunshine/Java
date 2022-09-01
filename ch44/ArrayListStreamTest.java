@@ -27,7 +27,8 @@ public class ArrayListStreamTest {
 
         Stream<String> stream = StringList.stream();
         //collection에 대한 stream을 생성하게 되면 내부적으로 가지고 있는 제너럴타입을 선언해야한다.
-        stream.forEach(n-> System.out.println(n));
+        stream.forEach(n-> System.out.println(n)); // 람다
+        // List, Map, Set, Array등을 순회하는 Iterator역할을 합니다.
         System.out.println();
 
         // 다른 연산을 사용할수없음. 스트림을 재생성해야함.

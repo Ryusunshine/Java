@@ -11,10 +11,12 @@ BufferedInputStream과 BufferedOutputStream을 이용하여 파일 복사하는 
 
 import java.io.*;
 
+//한 바이트씩 읽고 쓰면 시간이 오래걸려서 buffer로 감싸준다.
+
 public class FileCopyTest {
     public static void main(String[] args) throws FileNotFoundException {
         long millisecond = 0;
-        try(BufferedInputStream bis = new BufferedInputStream(new FileInputStream("a.zip"));
+        try(BufferedInputStream bis = new BufferedInputStream(new FileInputStream("a.zip")); // 감싸주기
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("copy.zip"))){
             millisecond = System.currentTimeMillis(); // 한번 timestep찍는다
             int i;

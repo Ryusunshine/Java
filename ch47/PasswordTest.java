@@ -8,7 +8,6 @@ public class PasswordTest {
     }
 
     public void setPassword(String password) {
-        this.password = password;
         if (password == null){
             throw new PasswordException("Input Password");
         } else if (password.length()<5){
