@@ -1,16 +1,12 @@
 package Test;
 
+
 import School.School;
 import School.Subject;
-import School.Student;
 import School.report.GenerateGradeReport;
-import Utils.Define;
+import School.Student;
 import School.Score;
-
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import Utils.Define;
 
 
 public class TestMain {
@@ -20,9 +16,10 @@ public class TestMain {
 
     GenerateGradeReport gradeReport = new GenerateGradeReport();
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         TestMain test = new TestMain();
+
         test.creatSubject();
         test.createStudent();
 
@@ -31,6 +28,7 @@ public class TestMain {
 
     }
 
+    //테스트 과목 생성
     public void creatSubject(){
 
         korean = new Subject("Korean", Define.KOREAN);
@@ -40,45 +38,47 @@ public class TestMain {
         SunshineSchool.addSubject(math);
     }
 
-    public void createStudent() throws FileNotFoundException {
+    //테스트 학생 생성
+    public void createStudent(){
 
-        Scanner scanner = new Scanner(new FileInputStream("studentinfo.txt"));
+        Student student1 = new Student("Jennie", 1001, korean  );
+        Student student2 = new Student("Rose", 1002, math );
+        Student student3 = new Student("Jisoo", 1003, korean  );
+        Student student4 = new Student("Lisa", 1004, korean  );
+        Student student5 = new Student("Ryusun", 1005, math );
 
-        String name;
-        int id;
-        int koreanScore;
-        int mathScore;
-        int majorCode;
+        SunshineSchool.addStudent(student1);
+        SunshineSchool.addStudent(student2);
+        SunshineSchool.addStudent(student3);
+        SunshineSchool.addStudent(student4);
+        SunshineSchool.addStudent(student5);
 
-        Student student = null;
+        korean.register(student1);
+        korean.register(student2);
+        korean.register(student3);
+        korean.register(student4);
+        korean.register(student5);
 
-        while(scanner.hasNextLine()) {
+        math.register(student1);
+        math.register(student2);
+        math.register(student3);
+        math.register(student4);
+        math.register(student5);
 
-            name = scanner.next();
-            id = scanner.nextInt();
-            koreanScore = scanner.nextInt();
-            mathScore = scanner.nextInt();
-            majorCode = scanner.nextInt();
+        addScoreForStudent(student1, korean, 95);
+        addScoreForStudent(student1, math, 56);
 
-            if(majorCode == Define.KOREAN) {
-                student = new Student(name, id, korean );
-            }
-            else if(majorCode == Define.MATH) {
-                student = new Student(name, id, math );
-            }
-            else {
-                System.out.println("전공 과목 오류 입니다");
-                return;
-            }
+        addScoreForStudent(student2, korean, 95);
+        addScoreForStudent(student2, math, 95);
 
-            SunshineSchool.addStudent(student);
-            korean.register(student);
-            math.register(student);
-            addScoreForStudent(student, korean, koreanScore);
-            addScoreForStudent(student, math, mathScore);
+        addScoreForStudent(student3, korean, 100);
+        addScoreForStudent(student3, math, 88);
 
-        }
-        scanner.close();
+        addScoreForStudent(student4, korean, 89);
+        addScoreForStudent(student4, math, 95);
+
+        addScoreForStudent(student5, korean, 85);
+        addScoreForStudent(student5, math, 56);
     }
 
     //과목별 성적 입력
